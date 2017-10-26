@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>        
+        <title>Dashboard — WordPress</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/admin-menu.css" type="text/css" media="all">
+        <link rel="stylesheet" href="css/dashicons.css" type="text/css" media="all">        
+        <link rel="stylesheet" href="css/common.css" type="text/css" media="all"> <!-- Optional -->
+
+    </head>
+    <body class="js">
+        <!--<body class="wp-admin wp-core-ui js  index-php auto-fold admin-bar branch-4-8 version-4-8-2 admin-color-fresh locale-en-us customize-support sticky-menu svg">-->
+        <div id="wpwrap">
+
+            <div id="adminmenumain" role="navigation" aria-label="Main menu">
+                <a href="#wpbody-content" class="screen-reader-shortcut">Skip to main content</a>
+                <a href="#wp-toolbar" class="screen-reader-shortcut">Skip to toolbar</a>
+                <div id="adminmenuback"></div>
+                <div id="adminmenuwrap">
+                    <ul id="adminmenu">
+                        <li class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last" id="menu-dashboard">
+                            <a href='index.php' class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-first menu-top-last" >
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-dashboard'><br /></div>
+                                <div class='wp-menu-name'>Dashboard</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Dashboard</li>
+                                <li class="wp-first-item current"><a href='index.php' class="wp-first-item current">Home</a></li>
+                                <li><a href='update-core.php'>Updates <span class='update-plugins count-13'><span class='update-count'>13</span></span></a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+                            <div class="separator"></div>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" id="menu-posts">
+                            <a href='edit.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-post'><br /></div>
+                                <div class='wp-menu-name'>Posts</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Posts</li>
+                                <li class="wp-first-item"><a href='edit.php' class="wp-first-item">All Posts</a></li>
+                                <li><a href='post-new.php'>Add New</a></li>
+                                <li><a href='edit-tags.php?taxonomy=category'>Categories</a></li>
+                                <li><a href='edit-tags.php?taxonomy=post_tag'>Tags</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+                            <a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-media'><br /></div>
+                                <div class='wp-menu-name'>Media</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Media</li>
+                                <li class="wp-first-item"><a href='upload.php' class="wp-first-item">Library</a></li>
+                                <li><a href='media-new.php'>Add New</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+                            <a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-page'><br /></div>
+                                <div class='wp-menu-name'>Pages</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Pages</li>
+                                <li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item">All Pages</a></li>
+                                <li><a href='post-new.php?post_type=page'>Add New</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" id="menu-comments">
+                            <a href='edit-comments.php' class="wp-not-current-submenu menu-top menu-icon-comments menu-top-last" >
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-comments'><br /></div>
+                                <div class='wp-menu-name'>Comments <span class="awaiting-mod count-0"><span class="pending-count">0</span></span></div>
+                            </a>
+                        </li>
+                        <li class="wp-not-current-submenu wp-menu-separator woocommerce" aria-hidden="true">
+                            <div class="separator"></div>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first" id="toplevel_page_woocommerce">
+                            <a href='edit.php?post_type=shop_order' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_woocommerce menu-top-first" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-generic'><br /></div>
+                                <div class='wp-menu-name'>WooCommerce</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>WooCommerce</li>
+                                <li class="wp-first-item"><a href='edit.php?post_type=shop_order' class="wp-first-item">Orders <span class="awaiting-mod update-plugins count-2"><span class="processing-count">2</span></span></a></li>
+                                <li><a href='edit.php?post_type=shop_coupon'>Coupons</a></li>
+                                <li><a href='admin.php?page=wc-reports'>Reports</a></li>
+                                <li><a href='admin.php?page=wc-settings'>Settings</a></li>
+                                <li><a href='admin.php?page=wc-status'>System status</a></li>
+                                <li><a href='admin.php?page=wc-addons'>Extensions</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product menu-top-last" id="menu-posts-product">
+                            <a href='edit.php?post_type=product' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-product menu-top-last" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-post'><br /></div>
+                                <div class='wp-menu-name'>Products</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Products</li>
+                                <li class="wp-first-item"><a href='edit.php?post_type=product' class="wp-first-item">Products</a></li>
+                                <li><a href='post-new.php?post_type=product'>Add product</a></li>
+                                <li><a href='edit-tags.php?taxonomy=product_cat&amp;post_type=product'>Categories</a></li>
+                                <li><a href='edit-tags.php?taxonomy=product_tag&amp;post_type=product'>Tags</a></li>
+                                <li><a href='edit.php?post_type=product&#038;page=product_attributes'>Attributes</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+                            <div class="separator"></div>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+                            <a href='themes.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-appearance'><br /></div>
+                                <div class='wp-menu-name'>Appearance</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Appearance</li>
+                                <li class="wp-first-item"><a href='themes.php' class="wp-first-item">Themes</a></li>
+                                <li class="hide-if-no-customize"><a href='customize.php?return=%2Fwp-admin%2Findex.php' class="hide-if-no-customize">Customize</a></li>
+                                <li><a href='widgets.php'>Widgets</a></li>
+                                <li><a href='nav-menus.php'>Menus</a></li>
+                                <li class="hide-if-no-customize"><a href='customize.php?return=%2Fwp-admin%2Findex.php&#038;autofocus%5Bcontrol%5D=background_image' class="hide-if-no-customize">Background</a></li>
+                                <li><a href='themes.php?page=rootstrap-options'>RootStrap Options</a></li>
+                                <li><a href='themes.php?page=custom-background'>Background</a></li>
+                                <li><a href='theme-editor.php'>Editor</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+                            <a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-plugins'><br /></div>
+                                <div class='wp-menu-name'>Plugins <span class='update-plugins count-9'><span class='plugin-count'>9</span></span></div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Plugins <span class='update-plugins count-9'><span class='plugin-count'>9</span></span></li>
+                                <li class="wp-first-item"><a href='plugins.php' class="wp-first-item">Installed Plugins</a></li>
+                                <li><a href='plugin-install.php'>Add New</a></li>
+                                <li><a href='plugin-editor.php'>Editor</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+                            <a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-users'><br /></div>
+                                <div class='wp-menu-name'>Users</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Users</li>
+                                <li class="wp-first-item"><a href='users.php' class="wp-first-item">All Users</a></li>
+                                <li><a href='user-new.php'>Add New</a></li>
+                                <li><a href='profile.php'>Your Profile</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+                            <a href='tools.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-tools'><br /></div>
+                                <div class='wp-menu-name'>Tools</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Tools</li>
+                                <li class="wp-first-item"><a href='tools.php' class="wp-first-item">Available Tools</a></li>
+                                <li><a href='import.php'>Import</a></li>
+                                <li><a href='export.php'>Export</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+                            <a href='options-general.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-settings'><br /></div>
+                                <div class='wp-menu-name'>Settings</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Settings</li>
+                                <li class="wp-first-item"><a href='options-general.php' class="wp-first-item">General</a></li>
+                                <li><a href='options-writing.php'>Writing</a></li>
+                                <li><a href='options-reading.php'>Reading</a></li>
+                                <li><a href='options-discussion.php'>Discussion</a></li>
+                                <li><a href='options-media.php'>Media</a></li>
+                                <li><a href='options-permalink.php'>Permalinks</a></li>
+                                <li><a href='options-general.php?page=wp-seo'>SEO</a></li>
+                            </ul>
+                        </li>
+                        <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
+                            <div class="separator"></div>
+                        </li>
+                        <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_affiliate-wp menu-top-first menu-top-last" id="toplevel_page_affiliate-wp">
+                            <a href='admin.php?page=affiliate-wp' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-generic toplevel_page_affiliate-wp menu-top-first menu-top-last" aria-haspopup="true">
+                                <div class="wp-menu-arrow"><div></div></div>
+                                <div class='wp-menu-image dashicons-before dashicons-admin-generic'><br /></div>
+                                <div class='wp-menu-name'>Affiliates</div>
+                            </a>
+                            <ul class='wp-submenu wp-submenu-wrap'>
+                                <li class='wp-submenu-head' aria-hidden='true'>Affiliates</li>
+                                <li class="wp-first-item"><a href='admin.php?page=affiliate-wp' class="wp-first-item">Overview</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-affiliates'>Affiliates</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-referrals'>Referrals</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-payouts'>Payouts</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-visits'>Visits</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-creatives'>Creatives</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-reports'>Reports</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-tools'>Tools</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-settings'>Settings</a></li>
+                                <li><a href='admin.php?page=affiliate-wp-add-ons'>Add-ons</a></li>
+                            </ul>
+                        </li>
+                        <li id="collapse-menu" class="hide-if-no-js">
+                            <button type="button" id="collapse-button" aria-label="Collapse Main menu" aria-expanded="true">
+                                <span class="collapse-button-icon" aria-hidden="true"></span>
+                                <span class="collapse-button-label">Collapse menu</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- adminmenumain -->
+
+            <div id="wpcontent">
+                <center>
+                    <h1>Content Goes Here ...</h1>
+                </center>
+                <div class="clear"></div>
+            </div><!-- wpcontent -->
+
+            <div id="wpfooter" role="contentinfo">
+                <p id="footer-left" class="alignleft">
+                    <span id="footer-thankyou">Thank you for creating with <a href="https://wordpress.org/">WordPress</a>.</span></p>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <script type='text/javascript' src='https://code.jquery.com/jquery-2.2.4.js'></script>
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.9.0/jquery.hoverIntent.js'></script>
+        <script type="text/javascript" src="js/common.js"></script>    
+    </body>
+</html>
